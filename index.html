@@ -1,167 +1,263 @@
 <!DOCTYPE HTML>
-<html lang="en">>
-    <head>
-        <title>Anvitha Shashidhar's Portfolio</title>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-        <link rel="stylesheet" href="assets/css/main.css" />
-        <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-    </head>
-    <body class="is-preload">
+<html lang="en">
+<head>
+    <title>Anvitha Shashidhar's Portfolio</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
 
-        <!-- Wrapper -->
-        <div id="wrapper" class="fade-in">
+        }
+        #intro {
+            text-align: center;
+            padding: 250px 0 0 20px;
+            color: white;
+            padding-right: 800px;
+        }
 
-            <!-- Intro -->
-            <div id="intro">
-                <h1>Anvitha Shashidhar</h1>
-                <p>A Data Engineer and Engineer Analyst about leveraging data to drive impactful business decisions and innovations.</p>
-                <ul class="actions">
-                    <li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
-                </ul>
+
+        #intro h1 {
+            font-size: 40px;
+            margin: 0;
+            color: white;
+        }
+
+        #intro p {
+            font-size: 1.5em;
+            margin: 10px 0 0 0;
+            color: white;
+        }
+
+        #intro h2 {
+            
+            
+            color: white;
+            padding-right: 400px;
+        }
+
+
+        #main .posts article p {
+            font-size: 1.1em;
+            line-height: 1.6em;
+            color: white;
+        }
+        .actions.special .button {
+            background-color: #f5576c;
+            border-color: #f5576c;
+        }
+        /* Basic styles for the navigation bar */
+        .navbar {
+            overflow: hidden;
+            background-color: #000;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .navbar a {
+            float: right;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .navbar a.active {
+            
+            color: white;
+        }
+
+        /* Add some top padding to the content to avoid overlap */
+        .content {
+            padding-top: 60px;
+        }
+        .footer-container {
+            background-color: #000;
+            padding: 20px;
+            text-align: center;
+            color: #fff;
+            
+        }
+
+        .footer-container p {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .footer-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .footer-icons .icon {
+            text-decoration: none;
+            color: #fff;
+            font-size: 36px;
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: transparent;
+            border: 2px solid #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .footer-icons .icon:hover {
+            background-color: #ffcc00;
+            color: #000;
+        }
+
+        .footer-icons .icon i {
+            font-size: 24px;
+        }
+        .footer-icons .icon.linkedin { color: #fff; }
+        .footer-icons .icon.github { color: #fff; }
+        .footer-icons .icon.email { color: #fff; }
+        .footer-icons .icon svg {
+                                width: 24px;
+                                height: 24px;
+                                fill: #fff; 
+                                transition: all 0.3s ease;
+                                }
+
+        .footer-icons .icon.tableau:hover svg {
+            fill: #000; /* Change to black on hover */
+            background-color: #ffcc00; /* Yellow background on hover */
+            border-radius: 50%;
+        }
+
+        /* General styling for the article */
+        article.post.featured {
+        text-align: justify-all; /* Center align text inside the article */
+        padding: 20px; /* Add padding around the text */
+        margin: 0 auto; /* Center the article horizontally if it has a set width */
+        max-width: 800px; /* Limit the width of the article */
+        }
+
+        /* Additional styling for the header if needed */
+        article.post.featured header.major {
+        margin: 0 auto; /* Center the header content */
+        margin-bottom: 20px;
+        }
+
+        .styled-paragraph {
+            background-color: white; /* White background */
+            color: black;            /* Black font color */
+            padding: 15px;           /* Add padding */
+            border-radius: 5px;      /* Optional: rounded corners */
+            margin-bottom: 15px;     /* Optional: space between paragraphs */
+
+        }
+        .spacer {
+            display: block;
+            height: 0px; /* Adjust this value to control the space between sentences */
+        }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            background-size: cover; /* Make sure the image covers the entire screen */
+            background-position: center; /* Center the background image */
+            background-repeat: no-repeat; /* Prevent the background image from repeating */
+            background-attachment: fixed; /* Ensure the background stays fixed when scrolling */
+            color: white;
+    }
+
+    </style>
+
+
+</head>
+
+<body class="is-preload">
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        
+        <a href="projects.html">Projects</a>
+        <a href="experience.html">Experience</a>
+        <a href="aboutme.html">About Me</a>
+        <a class="active" href="index.html">Home</a>
+    </div>
+
+    <!-- Intro -->
+    <div id="intro">
+        <h1> Hi, My name is Anvitha Shashidhar </h1>
+        <h2 > I'm a <span class="typing" style="color:white;"></span></h2>
+    </div>
+
+    <script>
+        var typed = new Typed('.typing', {
+            strings: ["Data Analyst","Data Scientist","Data Engineer", "Story Teller"],
+            typeSpeed: 50,
+            backSpeed: 50,
+            loop: true
+        });
+    </script>
+  
+
+        <!-- Main -->
+        <div id="main">
+
+            <!-- Featured Post -->
+            <article class="post featured">
+                <header class="major">  
+                    <p class="styled-paragraph">Driven by a passion for transforming raw data into actionable insights, I excel in harnessing data to drive strategic decision-making.<span class="spacer"></span>
+                    <br>With over three years of experience as a Data Engineer, I specialize in crafting predictive models, applying advanced machine learning algorithms, and creating compelling visualizations. My expertise spans cloud computing platforms, SQL, and data analysis tools, enabling me to deliver impactful solutions across various domains.<span class="spacer"></span>
+                    <br>I am actively seeking new opportunities in data science and engineering, and I am open to relocation for the right role.</p>
+                </header>
+            </article>
+
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="footer-container">
+        <p>Data Scientist - Machine Learning Enthusiast - Story Teller</p>
+            <div class="footer-icons">
+                <a href="https://public.tableau.com/profile/your-profile" class="icon tableau" aria-label="Tableau Public">
+            <!-- Embedding the Tableau SVG directly -->
+                    <svg width="24px" height="24px" viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg"><title>Tableau icon</title><path d="M11.654.174V2.377H9.682v.58h1.972V5.16h.696V2.957h1.97v-.58h-1.97V.174h-.348zm6.03 2.262l-.002 1.623v1.623h-2.957v.927h2.957v3.188H18.725l.011-1.582.02-1.576 1.465-.02 1.46-.01v-.927H18.728V2.436h-.522zm-12.407.06V5.686H2.291v.925H5.277V9.801h.985V6.61h3.013v-.925H6.262V2.496H5.77zm6.086 5.27v3.593H8.06v1.188h3.304v3.596h1.28v-3.596H15.953v-1.188H12.643V7.766h-.637zm9.721 1.55v2.221h-2.012v.811h2.012v2.261h.887v-2.261H24v-.811h-2.029V9.317h-.422zm-19.111.131V11.621H0v.621H1.973v2.194H2.64v-2.194h2v-.62H2.609V9.446h-.318zm15.709 4.516v3.254h-3.016v.927h3.016v3.217h1.072v-3.216H21.74v-.928H18.754v-3.254h-.533zm-12.463.008v3.246H2.262v.928h2.957v3.189H6.32v-3.189h2.955v-.928H6.32V13.97h-.55zm6.316 4.578l.002 1.103v1.1H9.566v.812h1.971v2.262h.928l.012-1.119.017-1.143H14.463v-.812h-2V18.549h-.465z"/>
+                    </svg>
+                </a>
+                <a href="https://www.linkedin.com/in/anvitha-ks" target="_blank" class="icon linkedin"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/AnvithaXYZ" target="_blank" class="icon github"><i class="fab fa-github"></i></a>
+                <a href="mailto:anvitha101@gmail.com" target="_blank" class="icon email"><i class="fas fa-envelope"></i></a>
             </div>
-
-            <!-- Header -->
-            <header id="header">
-                <a href="index.html" class="logo">My Portfolio</a>
-            </header>
-
-            <!-- Nav -->
-            <nav id="nav">
-                <ul class="links">
-                    <li class="active"><a href="index.html">Welcome to my Portfolio</a></li>
-                    <!-- <li><a href="elements.html">Projects</a></li>
-                    <li><a href="generic.html">Connect with me!</a></li> -->
-                </ul>
-                <ul class="icons">
-                    <li><a href="https://www.linkedin.com/in/anvitha-ks/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-                    <!-- <li><a href="#" class="icon brands fa-gmail"><span class="label">Facebook</span></a></li>
-                    <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li> -->
-                    <li><a href="https://github.com/AnvithaXYZ" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-                </ul>
-            </nav>
-
-            <!-- Main -->
-            <div id="main">
-
-                <!-- Featured Post -->
-                <article class="post featured">
-                    <header class="major">
-                        <h2>About Me</h2>
-                        <p>I am driven by a passion for transforming raw data into meaningful insights that drive strategic decision-making. With over 3 years of experience as a Data Engineer, I specialize in developing predictive models, applying advanced machine learning algorithms, and crafting impactful visualizations. My expertise spans across cloud computing platforms, SQL, and data analysis tools, which I've applied to deliver actionable solutions in various domains. I am actively seeking new opportunities in data science and engineering, and I am open to relocation for the right role.</p>
-                    </header>
-                    <a href="#" class="image main"><img src="" alt="" /></a>
-                </article>
-
-                <!-- Posts -->
-                <section class="posts">
-                    <article>
-                        <header>
-                            <h2>Real-Time Weather Alert System<br /></h2>
-                        </header>
-                        <img src="images/weather.jpg" alt="" class="image fit"/>
-                        <p>A system using AWS Cloud Services to provide real-time weather alerts based on data from multiple sources.</p>
-                        <ul class="actions special">
-                            <li><a href="https://github.com/anvithashashidhar/Weather-Alert-System" class="button">View Project</a></li>
-                        </ul>
-                    </article>
-                    <article>
-                        <header>
-                            <h2>Health Management Organization Analysis<br /></h2>
-                        </header>
-                        <img src="images/tlc.jpg" alt="" class="image fit"/>
-                        <p>Derived actionable insights from healthcare cost data to predict high-cost customers with 97% sensitivity and 90% accuracy. Utilized R packages like Caret, ggplot2, Shiny, and Tidyverse.</p>
-                        <ul class="actions special">
-                            <li><a href="https://github.com/AnvithaXYZ/InsightsfromHMO" class="button">View Project</a></li>
-                        </ul>
-                    </article>
-                    <article>
-                        <header>
-                            <h2>Syracuse Crime Data Analysis<br /></h2>
-                        </header>
-                        <img src="images/covid.jpg" alt="" class="image fit"/>
-                        <p>Exploring crime data using statistical methods and visualizations to understand the crime patterns.</p>
-                        <ul class="actions special">
-                            <li><a href="https://github.com/AnvithaXYZ/CrimeDatainSYRAnalysis" class="button">View Project</a></li>
-                        </ul>
-                    </article>
-                    <article>
-                        <header>
-                            <h2>Adventure Works Analysis<br /></h2>
-                        </header>
-                        <img src="images/loan.jpg" alt="" class="image fit"/>
-                        <p>A Power BI solution for Adventure Works to track KPIs (sales, revenue, profit, returns), compare regional performance, analyze product trend levels, and identify high-value customers, utilizing raw data transformation, relational data modeling, DAX calculations, and interactive dashboards.</p>
-                        <ul class="actions special">
-                            <li><a href="https://github.com/AnvithaXYZ/AdventureWorksReport" class="button">View Project</a></li>
-                        </ul>
-                    </article>
-                    <article>
-                        <header>
-                            <h2>FudgeMart Inc.<br /></h2>
-                        </header>
-                        <img src="images/crime.jpg" alt="" class="image fit"/>
-                        <p>An integrated data warehouse and Power BI solution for Fudgemart Inc., consolidating data from online retail and streaming operations to provide actionable insights on sales performance, using advanced ETL processes, data modeling, and interactive Power BI dashboards.</p>
-                        <ul class="actions special">
-                            <li><a href="https://github.com/AnvithaXYZ/FudgeInc" class="button">View Project</a></li>
-                        </ul>
-                    </article>
-                    <article>
-                        <header>
-                            <h2>Clinic Mangement System Database Implementation<br/></h2>
-                        </header>
-                        <img src="images/crime.jpg" alt="" class="image fit"/>
-                        <p>Developed a SQL-based relational database, employing E-R diagrams for effective conceptual and logical data modeling in database design.</p>
-                        <ul class="actions special">
-                            <li><a href="https://github.com/AnvithaXYZ/FudgeInc" class="button">View Project</a></li>
-                        </ul>
-                    </article>
-                    <!-- Add more projects as needed -->
-                </section>
-
-            </div>
-
-            <!-- Footer -->
-            <footer id="footer">
-                <section class="split contact">
-                    <section class="alt">
-                        <h3>Address</h3>
-                        <p>Concord, California, USA</p>
-                    </section>
-                    <!-- <section>
-                        <h3>Phone</h3>
-                        <p><a href="+13158320886">(315) 832-0886</a></p>
-                    </section> -->
-                    <section>
-                        <h3>Email</h3>
-                        <p><a href="mailto:anvitha101@gmail.com">anvitha101@gmail.com</a></p>
-                    </section>
-                    <section>
-                        <h3>Social</h3>
-                        <ul class="icons alt">
-                            <li><a href="https://www.linkedin.com/in/anvitha-ks" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-                            <!-- <li><a href="#" class="icon brands fa-gmail"><span class="label">Facebook</span></a></li>
-                            <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li> -->
-                            <li><a href="https://github.com/AnvithaXYZ" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-                        </ul>
-                    </section>
-                </section>
-            </footer>
-
-            <!-- Copyright -->
-            <div id="copyright">
-                <ul><li>&copy; Anvitha Shashidhar</li></ul>
-            </div>
-
+            <ul>&copy; Anvitha Shashidhar</ul>
         </div>
+    </footer>
 
-        <!-- Scripts -->
-        <script src="assets/js/jquery.min.js"></script>
-        <script src="assets/js/jquery.scrollex.min.js"></script>
-        <script src="assets/js/jquery.scrolly.min.js"></script>
-        <script src="assets/js/browser.min.js"></script>
-        <script src="assets/js/breakpoints.min.js"></script>
-        <script src="assets/js/util.js"></script>
-        <script src="assets/js/main.js"></script>
 
-    </body>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
 </html>
